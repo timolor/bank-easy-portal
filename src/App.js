@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import globalStyle from "./globalStyles";
+import "./App.css";
+import { Global, ThemeProvider } from "@emotion/react";
+import { ErrorBoundary } from "react-error-boundary";
+import { theme } from "./theme";
+
+const ErrorFallback = ({ error }) => {
+	return (
+		<div role="alert">
+			<p>Something went wrong:</p>
+			<pre>{error.message}</pre>
+		</div>
+	);
+};
+
+const myErrorHandler = (error) => {
+	console.log(error);
+};
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	console.log(theme);
+	return (
+		<ErrorBoundary FallbackComponent={ErrorFallback} onError={myErrorHandler}>
+			<ThemeProvider theme={theme}>
+				<Global styles={globalStyle} />
+			</ThemeProvider>
+		</ErrorBoundary>
+	);
 }
 
 export default App;
