@@ -3,10 +3,6 @@ import { Input } from "./index";
 export default {
 	title: "Components/Atoms/Input",
 	component: Input,
-	// argTypes: {
-	// 	type: { options: ["button", "submit", "reset"], control: { type: "radio" } },
-	// 	variant: { options: ["primary", "secondary"], control: { type: "radio" } },
-	// },
 };
 
 const Template = (args) => <Input {...args} />;

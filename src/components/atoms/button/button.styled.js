@@ -1,13 +1,13 @@
 import styled from "@emotion/styled";
-import { css, keyframes } from "@emotion/core";
+import { css, keyframes } from "@emotion/react";
 
 const spin = keyframes`
-from {
-  transform: rotate(0deg);
-}
-to {
-  transform: rotate(360deg);
-}
+	from {
+	transform: rotate(0deg);
+	}
+	to {
+	transform: rotate(360deg);
+	}
 `;
 
 export const StyledButton = styled.button`
