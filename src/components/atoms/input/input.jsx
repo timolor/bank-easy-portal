@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Icon } from "../icon";
 import { StyledInputContainer, StyledInput } from "./input.styled";
 
-const Input = ({ placeholder, type, onChange }) => {
+const Input = ({ placeholder, type, onChange, value, ...props }) => {
 	const [show, setShow] = useState(false);
 	const toggleShow = () => setShow((v) => !v);
 	return (
@@ -11,6 +11,8 @@ const Input = ({ placeholder, type, onChange }) => {
 				placeholder={placeholder}
 				type={show ? "password" : "text" || type}
 				onChange={onChange}
+				value={value}
+				{...props}
 			/>
 			{type === "password" && (
 				<Icon
