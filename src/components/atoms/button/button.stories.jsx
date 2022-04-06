@@ -1,7 +1,7 @@
 import { Button } from "./index";
 
 export default {
-	title: "Components/Atoms/Buttons/Primary Button",
+	title: "Components/Atoms/Button",
 	component: Button,
 	argTypes: {
 		type: { options: ["button", "submit", "reset"], control: { type: "radio" } },
@@ -11,10 +11,10 @@ export default {
 
 const Template = (args) => <Button {...args}>Join Meeting</Button>;
 
-export const PrimaryButton = Template.bind({});
-PrimaryButton.args = {
+export const button = Template.bind({});
+button.args = {
 	fullWidth: false,
-	// disabled: false,
+	disabled: false,
 	loading: false,
 	rounded: false,
 	type: "button",

@@ -32,6 +32,14 @@ export const StyledButton = styled.button`
 			width: 100%;
 		`}
 
+	${({ disabled }) =>
+		disabled &&
+		css`
+			pointer-event: none;
+			cursor: not-allowed;
+			opacity: 0.5;
+		`} 
+
 	${({ rounded }) =>
 		rounded &&
 		css`

@@ -10,6 +10,7 @@ const color = {
 	green400: "rgba(33, 150, 83, 0.1)",
 	gray100: "#FAFAFA",
 	gray200: "#EBEBEB",
+	gray300: "#C5C5C5",
 	red100: "#EB5757",
 	red200: "rgba(235, 87, 87, 0.1)",
 	blue100: "#2F80ED",
@@ -91,7 +92,7 @@ const variant = {
 	secondary: {
 		backgroundColor: color.gray200,
 		color: color.black,
-		background: color.gray100,
+		background: color.gray300,
 	},
 };
 
