@@ -19,7 +19,6 @@ const myErrorHandler = (error) => {
 };
 
 function App() {
-	console.log(theme);
 	return (
 		<ErrorBoundary FallbackComponent={ErrorFallback} onError={myErrorHandler}>
 			<ThemeProvider theme={theme}>

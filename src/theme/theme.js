@@ -15,6 +15,9 @@ const color = {
 	blue100: "#2F80ED",
 	blue200: "rgba(47, 128, 237, 0.1)",
 	yellow100: "rgba(252, 175, 23, 0.1)",
+	yellow200: "rgba(255, 169, 0, 0.5)",
+	yellow300: "#FFCC68",
+	yellow400: "rgba(252, 175, 23, 0.3)",
 	card: {
 		shadow: "0px 0px 3px rgba(0, 0, 0, 0.15)",
 	},
@@ -78,6 +81,20 @@ const breakpoints = {
 	xl: "1920px",
 };
 
+//button variants
+const variant = {
+	primary: {
+		backgroundColor: color.primary,
+		color: color.black,
+		background: color.yellow300,
+	},
+	secondary: {
+		backgroundColor: color.gray200,
+		color: color.black,
+		background: color.gray100,
+	},
+};
+
 const mq = Object.keys(breakpoints).reduce((acc, label) => {
 	acc[label] = (...args) => css`
 		@media (max-width: ${breakpoints[label]}) {
@@ -87,4 +104,4 @@ const mq = Object.keys(breakpoints).reduce((acc, label) => {
 	return acc;
 }, {});
 
-export const theme = { color, font, spacing, mq };
+export const theme = { color, font, spacing, mq, variant };
