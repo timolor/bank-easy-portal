@@ -22,9 +22,11 @@ const Switch = ({ animated, initialChecked, checked, icon, iconOn, iconOff, onCh
 		if (checked === undefined) return;
 		setSelfChecked(checked);
 	}, [checked]);
+
 	useEffect(() => {
 		initialChecked ? setSelfChecked(true) : setSelfChecked(false);
 	}, [initialChecked]);
+
 	return (
 		<StyledSwitchContainer animated={animated} {...props}>
 			<StyledSwitchInput tabIndex={-1} type="checkbox" checked={selfChecked} onChange={handleChange} />

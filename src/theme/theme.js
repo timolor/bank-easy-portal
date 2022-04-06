@@ -96,6 +96,17 @@ const variant = {
 	},
 };
 
+const actionType = {
+	disabled: {
+		backgroundColor: color.red200,
+		color: color.red100,
+	},
+	enabled: {
+		backgroundColor: color.green300,
+		color: color.green100,
+	},
+};
+
 const mq = Object.keys(breakpoints).reduce((acc, label) => {
 	acc[label] = (...args) => css`
 		@media (max-width: ${breakpoints[label]}) {
@@ -105,4 +116,4 @@ const mq = Object.keys(breakpoints).reduce((acc, label) => {
 	return acc;
 }, {});
 
-export const theme = { color, font, spacing, mq, variant };
+export const theme = { color, font, spacing, mq, variant, actionType };
