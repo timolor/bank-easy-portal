@@ -7,20 +7,30 @@ const Input = ({ placeholder, type, onChange, value, ...props }) => {
 	const toggleShow = () => setShow((v) => !v);
 	return (
 		<StyledInputContainer>
-			<StyledInput
-				placeholder={placeholder}
-				type={show ? "password" : "text" || type}
-				onChange={onChange}
-				value={value}
-				{...props}
-			/>
-			{type === "password" && (
-				<Icon
-					icon="show"
-					onClick={toggleShow}
-					fill="#C5C5C5"
-					viewBox="0 0 22 15"
-					className="password_icon"
+			{type === "password" ? (
+				<>
+					<StyledInput
+						placeholder={placeholder}
+						type={!show ? "password" : "text"}
+						onChange={onChange}
+						value={value}
+						{...props}
+					/>{" "}
+					<Icon
+						icon="show"
+						onClick={toggleShow}
+						fill="#C5C5C5"
+						viewBox="0 0 22 15"
+						className="password_icon"
+					/>
+				</>
+			) : (
+				<StyledInput
+					placeholder={placeholder}
+					type={type}
+					onChange={onChange}
+					value={value}
+					{...props}
 				/>
 			)}
 		</StyledInputContainer>

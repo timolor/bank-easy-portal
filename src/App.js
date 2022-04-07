@@ -4,6 +4,7 @@ import "./App.css";
 import { Global, ThemeProvider } from "@emotion/react";
 import { ErrorBoundary } from "react-error-boundary";
 import { theme } from "./theme";
+import RouterComponent from "pages/router";
 
 const ErrorFallback = ({ error }) => {
 	return (
@@ -23,6 +24,7 @@ function App() {
 		<ErrorBoundary FallbackComponent={ErrorFallback} onError={myErrorHandler}>
 			<ThemeProvider theme={theme}>
 				<Global styles={globalStyle} />
+				<RouterComponent />
 			</ThemeProvider>
 		</ErrorBoundary>
 	);
