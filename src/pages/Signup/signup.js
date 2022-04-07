@@ -76,7 +76,7 @@ const Signup = () => {
 								</Box>
 								<p className="form__bottom-text">
 									Don't have an account?{" "}
-									<Link to="/" className="form__link">
+									<Link to="/auth/login" className="form__link">
 										Sign In
 									</Link>
 								</p>
