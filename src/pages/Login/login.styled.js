@@ -21,7 +21,9 @@ export const InnerContainer = styled(Box)`
 
 export const LeftContainer = styled(Box)``;
 
-export const RightContainer = styled(Box)``;
+export const RightContainer = styled(Box)`
+	margin-left: 10rem;
+`;
 
 export const IllusImageContainer = styled(Box)`
 	position: absolute;
