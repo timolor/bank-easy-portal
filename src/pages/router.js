@@ -6,12 +6,14 @@ const Signup = React.lazy(() => import("./Signup/signup"));
 const ForgotPass = React.lazy(() => import("./ForgotPass/forgotPass"));
 const VerifyCode = React.lazy(() => import("./VerifyCode/verifycode"));
 const CreatePassword = React.lazy(() => import("./CreatePass/createpass"));
+const Home = React.lazy(() => import("./Home/home"));
 
 const RouterComponent = () => {
 	return (
 		<Router>
 			<Suspense fallback={<div />}>
 				<Routes>
+					<Route path="/" element={<Home />} />
 					<Route path="/auth/login" element={<Login />} />
 					<Route path="/auth/signup" element={<Signup />} />
 					<Route path="/auth/forgot-password" element={<ForgotPass />} />
