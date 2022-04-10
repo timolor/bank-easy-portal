@@ -49,15 +49,28 @@ const Signup = () => {
 								</Box>
 								<Box display="flex" alignItems="center" marginBottom="14px">
 									<Icon icon="message" className="form__icon" fill="#C5C5C5" />
-									<Input placeholder="Email" type="email" />
+									<Input placeholder="Email" type="email" id="email" autoComplete="email" />
 								</Box>
 								<Box display="flex" alignItems="center" marginBottom="14px">
 									<Icon icon="key" className="form__icon" fill="#C5C5C5" />
-									<Input placeholder="Password" type="password" />
+									<Input
+										name="password"
+										placeholder="Password"
+										type="password"
+										autocomplete="new-password"
+										id="new-password"
+										autoComplete="new-password"
+									/>
 								</Box>
 								<Box display="flex" alignItems="center" marginBottom="14px">
 									<Icon icon="key" className="form__icon" fill="#C5C5C5" />
-									<Input placeholder="Confirm Password" type="password" />
+									<Input
+										placeholder="Confirm Password"
+										type="password"
+										autocomplete="new-password"
+										id="confirm-password"
+										autoComplete="confirm-password"
+									/>
 								</Box>
 								<Link to="/" className="form__forget">
 									Forget Password?

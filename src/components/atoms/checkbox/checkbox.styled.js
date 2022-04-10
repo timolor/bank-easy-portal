@@ -32,8 +32,8 @@ export const StyledCheckbox = styled.div`
 	position: relative;
 	top: 3px;
 	display: inline-block;
-	width: 20px;
-	height: 20px;
+	width: 18px;
+	height: 18px;
 	border-radius: 3px;
 	transition: all 0.5s;
 	background: ${(props) => (props.checked ? "#ffa900" : "white")};

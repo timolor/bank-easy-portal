@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, memo } from "react";
 import { Icon } from "../icon";
 import { StyledInputContainer, StyledInput } from "./input.styled";
 
-const Input = ({ placeholder, type, onChange, value, ...props }) => {
+const Input = ({ placeholder, type, onChange, value, autocomplete, ...props }) => {
 	const [show, setShow] = useState(false);
 	const toggleShow = () => setShow((v) => !v);
 	return (
@@ -14,6 +14,7 @@ const Input = ({ placeholder, type, onChange, value, ...props }) => {
 						type={!show ? "password" : "text"}
 						onChange={onChange}
 						value={value}
+						autoComplete={autocomplete}
 						{...props}
 					/>{" "}
 					<Icon
@@ -21,6 +22,7 @@ const Input = ({ placeholder, type, onChange, value, ...props }) => {
 						onClick={toggleShow}
 						fill="#C5C5C5"
 						viewBox="0 0 22 15"
+						size={20}
 						className="password_icon"
 					/>
 				</>
@@ -37,4 +39,4 @@ const Input = ({ placeholder, type, onChange, value, ...props }) => {
 	);
 };
 
-export default Input;
+export default memo(Input);

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo, useCallback } from "react";
+import React, { useState, useEffect, useMemo, memo, useCallback } from "react";
 import {
 	StyledSwitchContainer,
 	StyledSwitchInput,
@@ -48,4 +48,4 @@ const ModeSwitch = ({ animated, initialChecked, checked, icon, iconOn, iconOff, 
 	);
 };
 
-export default ModeSwitch;
+export default memo(ModeSwitch);

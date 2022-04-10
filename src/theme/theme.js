@@ -20,7 +20,7 @@ const color = {
 	yellow300: "#FFCC68",
 	yellow400: "rgba(252, 175, 23, 0.3)",
 	shadow: {
-		modal: "0px 0px 3px rgba(0, 0, 0, 0.15)",
+		modal: "0px 1px 5px rgba(0, 0, 0, 0.15)",
 		login: "0px 1px 5px rgba(0, 0, 0, 0.15)",
 	},
 };
