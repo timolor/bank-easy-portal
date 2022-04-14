@@ -30,6 +30,7 @@ export const Heading2 = styled.div`
 	font-weight: ${(props) => props.theme.font.weight.black};
 	margin-bottom: 3rem;
 	line-height: 60px;
+	padding-right: 20rem;
 `;
 
 export const KYCStatus = styled.div`
