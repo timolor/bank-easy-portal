@@ -22,7 +22,7 @@ export const StyledInput = styled.input`
 	font-size: ${({ theme }) => theme.font.size[2]};
 	font-weight: ${({ theme }) => theme.font.weight.medium};
 	&::placeholder {
-		color: ${({ theme }) => theme.color.gray300};
+		color: ${({ theme }) => theme.color.gray400};
 	}
 	&:focus {
 		outline: none;

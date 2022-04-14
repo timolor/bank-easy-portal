@@ -8,7 +8,7 @@ const StyledModal = styled(Modal)`
 	background: ${({ theme }) => theme.color.white};
 	box-shadow: ${({ theme }) => theme.color.shadow.modal};
 	border-radius: 15px;
-	max-width: 700px;
+	max-width: 550px;
 	max-height: 90vh;
 	width: 90%;
 	position: relative;

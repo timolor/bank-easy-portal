@@ -1,14 +1,21 @@
 import styled from "@emotion/styled";
+import { Menu } from "components/molecules/DropMenu/dropMenu";
+
+export const NavbarMainContainer = styled.div`
+	display: flex;
+	flex-direction: column;
+	position: fixed;
+	top: 0;
+	width: 100%;
+`;
 
 export const NavbarContainer = styled.div`
 	background: ${(props) => props.theme.color.white};
 	padding: 2rem 10rem;
 	display: flex;
-	position: fixed;
 	align-items: center;
 	justify-content: space-between;
 	width: 100%;
-	top: 0;
 	.link {
 		text-decoration: none;
 		color: ${(props) => props.theme.color.black};
@@ -24,4 +31,9 @@ export const NavbarContainer = styled.div`
 		margin-right: 30px;
 		cursor: pointer;
 	}
+`;
+
+export const StyledNavbarMenu = styled(Menu)`
+	display: flex;
+	flex-direction: column;
 `;
