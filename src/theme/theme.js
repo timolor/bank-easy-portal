@@ -2,15 +2,20 @@ import { css } from "@emotion/react";
 
 const color = {
 	black: "#000000",
+	black200: "#212121",
+	black300: "#151515",
 	white: "#FFFFFF",
 	primary: "#FFA900",
 	green100: "#00DA5C",
 	green200: "#6FCF97",
 	green300: "rgba(0, 218, 92, 0.05)",
 	green400: "rgba(33, 150, 83, 0.1)",
+	green500: "#219653",
 	gray100: "#FAFAFA",
 	gray200: "#EBEBEB",
 	gray300: "#C5C5C5",
+	gray400: "#7C7C7C",
+	gray500: "#F7F6F4",
 	red100: "#EB5757",
 	red200: "rgba(235, 87, 87, 0.1)",
 	blue100: "#2F80ED",
@@ -19,8 +24,9 @@ const color = {
 	yellow200: "rgba(255, 169, 0, 0.5)",
 	yellow300: "#FFCC68",
 	yellow400: "rgba(252, 175, 23, 0.3)",
-	card: {
-		shadow: "0px 0px 3px rgba(0, 0, 0, 0.15)",
+	shadow: {
+		modal: "0px 1px 5px rgba(0, 0, 0, 0.15)",
+		login: "0px 1px 5px rgba(0, 0, 0, 0.15)",
 	},
 };
 

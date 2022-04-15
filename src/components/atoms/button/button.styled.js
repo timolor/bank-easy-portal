@@ -15,11 +15,20 @@ export const StyledButton = styled.button`
 	border: none;
 	border-radius: 5px;
 	color: ${({ theme }) => theme.color.black};
-	padding: 13px 24px;
+	padding: 10px 20px;
 	font-weight: ${({ theme }) => theme.font.weight.bold};
-	font-size: ${({ theme }) => theme.font.size[3]};
+	font-size: ${({ theme }) => theme.font.size[2]};
 	line-height: 20px;
 	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	svg {
+		margin-right: 8px;
+		margin-top: 2px;
+		width: 15px;
+		height: 15px;
+	}
 
 	&:hover {
 		background: ${({ theme }) => theme.color.yellow300};

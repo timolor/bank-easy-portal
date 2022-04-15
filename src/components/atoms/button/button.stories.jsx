@@ -18,4 +18,6 @@ button.args = {
 	loading: false,
 	rounded: false,
 	type: "button",
+	icon: "dashboard",
+	iconFill: "#000",
 };

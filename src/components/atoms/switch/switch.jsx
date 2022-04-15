@@ -2,7 +2,7 @@ import React, { useState, useEffect, useMemo, useCallback } from "react";
 import { StyledSwitchContainer, StyledSwitchInput, StyledSwitch, StyledSwitchCircle } from "./switch.styled";
 
 const Switch = ({ animated, initialChecked, checked, icon, iconOn, iconOff, onChange, ...props }) => {
-	const [selfChecked, setSelfChecked] = useState(false);
+	const [selfChecked, setSelfChecked] = useState(checked);
 
 	const circleIcon = useMemo(() => {
 		const hasIcon = icon || iconOn || iconOff;
