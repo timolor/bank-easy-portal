@@ -147,18 +147,21 @@ export const SubNavTab = styled.div`
 `;
 
 export const TabTitle = styled.div`
-	color: ${({ theme }) => theme.color.black};
+	color: ${({ theme }) => theme.color.gray400};
 	font-size: ${({ theme }) => theme.font.size[3]};
-	font-weight: ${({ theme }) => theme.font.weight.medium};
+	font-weight: ${({ theme }) => theme.font.weight.normal};
 	padding: 2rem 4rem;
 	border-bottom: none;
-	${({ activeTab1, activeTab2, activeTab3 }) =>
+	${({ activeTab1, activeTab2, activeTab3, theme }) =>
 		(activeTab1 || activeTab2 || activeTab3) &&
 		css`
 			border-bottom: 3px solid #ffa900;
+			font-weight: 500;
+			color: black;
 		`}
 `;
 
 export const PageContainer = styled.div`
-	padding-top: 8rem;
+	padding: 8rem 0;
+	background: ${({ theme }) => theme.color.gray500};
 `;

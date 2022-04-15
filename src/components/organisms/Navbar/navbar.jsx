@@ -16,13 +16,13 @@ const Navbar = ({ children }) => {
 					<Link className="link" to="/">
 						<img src={Logo} alt="website_logo" />
 					</Link>
-					<Link className="link" to="/">
+					<Link className="link" to="/manage">
 						Manage
 					</Link>
-					<Link className="link" to="/">
+					<Link className="link" to="/transactions">
 						Transactions
 					</Link>
-					<Link className="link" to="/">
+					<Link className="link" to="/settings">
 						Settings
 					</Link>
 				</Box>

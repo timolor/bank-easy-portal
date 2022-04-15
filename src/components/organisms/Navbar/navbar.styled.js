@@ -6,6 +6,7 @@ export const NavbarMainContainer = styled.div`
 	flex-direction: column;
 	position: fixed;
 	top: 0;
+	z-index: 100;
 	width: 100%;
 `;
 

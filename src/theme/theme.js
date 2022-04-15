@@ -15,6 +15,7 @@ const color = {
 	gray200: "#EBEBEB",
 	gray300: "#C5C5C5",
 	gray400: "#7C7C7C",
+	gray500: "#F7F6F4",
 	red100: "#EB5757",
 	red200: "rgba(235, 87, 87, 0.1)",
 	blue100: "#2F80ED",
