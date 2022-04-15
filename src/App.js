@@ -22,10 +22,12 @@ const myErrorHandler = (error) => {
 function App() {
 	return (
 		<ErrorBoundary FallbackComponent={ErrorFallback} onError={myErrorHandler}>
-			<ThemeProvider theme={theme}>
-				<Global styles={globalStyle} />
-				<RouterComponent />
-			</ThemeProvider>
+			<div className="App">
+				<ThemeProvider theme={theme}>
+					<Global styles={globalStyle} />
+					<RouterComponent />
+				</ThemeProvider>
+			</div>
 		</ErrorBoundary>
 	);
 }

@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { css } from "@emotion/react";
 
 export const ProfileContainer = styled.div`
 	background: ${(props) => props.theme.color.black300};
@@ -6,7 +7,7 @@ export const ProfileContainer = styled.div`
 
 export const Banner = styled.div`
 	display: flex;
-	padding: 20rem 0;
+	padding: 10rem 0;
 `;
 
 export const Left = styled.div`
@@ -63,7 +64,7 @@ export const KYCStatusTop = styled.p`
 `;
 export const FormContainer = styled.div`
 	padding: 3rem 2rem;
-	width: 50rem;
+	width: 55rem;
 	min-width: 40rem;
 	border-top-left-radius: 10px;
 	border-top-right-radius: 10px;
@@ -137,4 +138,27 @@ export const ModalTitle = styled.h1`
 	font-weight: ${(props) => props.theme.font.weight.bold};
 	text-transform: uppercase;
 	margin-bottom: 2rem;
+`;
+
+export const SubNavTab = styled.div`
+	background: ${({ theme }) => theme.color.gray200};
+	padding: 0 20rem;
+	display: flex;
+`;
+
+export const TabTitle = styled.div`
+	color: ${({ theme }) => theme.color.black};
+	font-size: ${({ theme }) => theme.font.size[3]};
+	font-weight: ${({ theme }) => theme.font.weight.medium};
+	padding: 2rem 4rem;
+	border-bottom: none;
+	${({ activeTab1, activeTab2, activeTab3 }) =>
+		(activeTab1 || activeTab2 || activeTab3) &&
+		css`
+			border-bottom: 3px solid #ffa900;
+		`}
+`;
+
+export const PageContainer = styled.div`
+	padding-top: 8rem;
 `;

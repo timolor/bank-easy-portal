@@ -6,27 +6,25 @@ import { Kyc } from "./Kyc/Kyc";
 
 const Settings = () => {
 	const [activeTab, setActiveTab] = useState("tab1");
-	const [activeTab1, setActiveTab1] = useState(true);
-	const [activeTab2, setActiveTab2] = useState(false);
+
+	const [tabStates, setTabStates] = useState({ activeTab1: true, activeTab2: false });
 
 	const handleTab1 = () => {
 		setActiveTab("tab1");
-		setActiveTab1(true);
-		setActiveTab2(false);
+		setTabStates({ ...tabStates, activeTab1: true, activeTab2: false });
 	};
 	const handleTab2 = () => {
 		setActiveTab("tab2");
-		setActiveTab1(false);
-		setActiveTab2(true);
+		setTabStates({ ...tabStates, activeTab1: false, activeTab2: true });
 	};
 	return (
 		<div>
 			<Navbar>
 				<SubNavTab>
-					<TabTitle onClick={handleTab1} activeTab1={activeTab1}>
+					<TabTitle onClick={handleTab1} activeTab1={tabStates.activeTab1}>
 						Profile
 					</TabTitle>
-					<TabTitle onClick={handleTab2} activeTab2={activeTab2}>
+					<TabTitle onClick={handleTab2} activeTab2={tabStates.activeTab2}>
 						KYC
 					</TabTitle>
 				</SubNavTab>

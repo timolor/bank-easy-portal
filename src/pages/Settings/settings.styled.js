@@ -11,7 +11,7 @@ export const TabTitle = styled.div`
 	color: ${({ theme }) => theme.color.gray300};
 	font-size: ${({ theme }) => theme.font.size[3]};
 	font-weight: ${({ theme }) => theme.font.weight.medium};
-	padding: 2rem 4rem;
+	padding: 1.6rem 4rem;
 	border-bottom: none;
 	${({ activeTab1, activeTab2 }) =>
 		(activeTab1 || activeTab2) &&
